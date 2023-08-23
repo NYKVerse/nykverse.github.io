@@ -249,6 +249,12 @@ body {
         }
 
         @media screen and (max-width: 800px) {
+            html {
+
+            }
+            body {
+                height: 100%;
+            }
             .nyk {
                 font-size: 3vw;
                 justify-content: center;
