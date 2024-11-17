@@ -4,11 +4,15 @@ html{
     background-color: black;
     color: white;
     font-family: serif;
-    
+    scroll-behavior: smooth;
 }
 body {
     margin: auto;
     height: auto;
+}
+.space {
+    margin: 0rem;
+    height: 15rem;
 }
 .container {
     width: 100vw;
@@ -106,6 +110,7 @@ body {
     text-transform: uppercase;
     transition: 500ms ease-in-out;
     cursor:default;
+    font-size: 3rem;
 }
 .body h1:hover {
     letter-spacing: 50;
