@@ -19,6 +19,7 @@ body {
     margin: auto;
     align-items: center;
     position: fixed;
+    z-index: 10;
 }
 
 /* Star styling and rotation on hover */
@@ -38,7 +39,7 @@ body {
 
 }
 #toggle:checked ~ .menu {
-    transform: translateY(0);
+    transform: translate(0);
 }
 
 .container:hover .star{
@@ -47,14 +48,15 @@ body {
 /* Menu styling */
 .menu {
     display: flex;
-    gap: 12rem;
+    gap: 8rem;
     justify-content: center;
     margin: auto;
     margin-top: 1rem;
     opacity: 1;
     z-index: 1;
+    width: 100vw;
     transform: translateY(-20vh);
-    margin-top: -11vh;
+    margin-top: -15vh;
     transition: 0.5s ease-in-out;
 }
 /* Individual menu items */
@@ -64,9 +66,9 @@ body {
     text-decoration: none;
     color: white;
     margin: 100px;
-    letter-spacing: 5;
+    letter-spacing: 3;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: 0.3s ease-in-out;
 }
 .left {
@@ -82,20 +84,21 @@ body {
 .item:hover {
     color: #54a4ff;
     font-weight: 100;
-    letter-spacing: 15;
-    font-size: 3rem;
+    letter-spacing: 10;
+    font-size: 1.8rem;
     animation: 2s multifonts infinite;
 }
 
 .logo {
     padding-top: 30vh;
     display: block;
-    width: 35%;
+    width: fit-content;
     scale: 1.3;
     margin: auto;
     position: relative;
     z-index: -3;
     padding-bottom: 30vh;
+    align-items: center;
 }
 
 .body {
@@ -110,7 +113,7 @@ body {
     text-transform: uppercase;
     transition: 500ms ease-in-out;
     cursor:default;
-    font-size: 3rem;
+    font-size: 3vw;
 }
 .body h1:hover {
     letter-spacing: 50;
@@ -120,15 +123,17 @@ body {
     z-index: -1;
     display: block;
     margin: auto;
-    width: 1280;
-    height: 720;
+    width: 90%;
+    height: 90%;
 }
 
 .projects{
     display: flex;
+    justify-content: center;
+    margin: auto;
 }
 .dig {
-    width: 300px;
+    width: 15vw;
     margin: auto;
     text-decoration: none;
     color: white;
@@ -143,7 +148,7 @@ body {
     border-color: white;
     border-width: 30px;
     border-style:double;
-    z-index: 1;
+    z-index: 3;
 }
 .ctx {
     color: white;
