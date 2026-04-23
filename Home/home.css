@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+html {
+    background-image: linear-gradient(45deg, #7838bc, #459de4);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}
+.topMenu {
+    z-index: 10;
+    position:fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    img {
+        width: 50px;
+        transition: 200ms;
+    }
+    img:hover{
+        rotate: 45deg;
+    }
+    #toggle{
+        display: none;
+    }
+    #toggle:checked ~ .menuContainer{
+        right: 20;
+    }
+    
+    /* #toggle:checked ~ .menuContainer a{
+        animation: fih 700ms 0.5s;
+    } */
+    .menuContainer {
+        transition: 500ms;
+        right: -15vw;
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        a {
+            
+            text-decoration: none;
+            padding: 10px;
+            text-align: right;
+            text-decoration: none;
+            color: white;
+            transition: 100ms;
+            border-radius: 5px;
+        }
+        a:hover {
+            animation: fih 700ms 0.1s;
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        
+    }
+    
+}
+@keyframes fih {
+    0% { opacity: 0%;}
+    10% { opacity: 100%;}
+    20% { opacity: 0%;}
+    30% { opacity: 100%;}
+    40% { opacity: 0%;}
+    50% { opacity: 100%;}
+}
+.banner{
+    background-image: url("../Images/bannerBackground.png") ;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 50px; */
+    height: 100%;
+    .left {
+        display: flex;
+        justify-content: center;
+        max-width: 40%;
+        .logo {
+            mix-blend-mode: screen;
+            width: 100%;
+        }
+    }
+    .right {
+        padding: 50px;
+        text-align: left;
+        max-width: 500px;
+        h3, p {
+            margin: 5px;
+            font-size: small;
+        }
+        h1 {
+            font-family:'Montserrat';
+            font-size: x-large;
+        }
+    }
+    .bottom {
+        left: 10;
+        position: absolute;
+        top: 10;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+            font-size: x-small;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            padding: 0.5em 0.5em;
+            /* background-color: grey; */
+        }
+        a:hover {
+            color: #4a9df6;
+            mix-blend-mode: color-dodge;
+        }
+        a img {
+            left: 0;
+            width: 2em;
+            margin: auto;
+        }
+    }
+}
+.content1{
+    height: 100%;
+}
