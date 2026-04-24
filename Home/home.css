@@ -83,6 +83,8 @@ html {
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: relative;
+    overflow-x: hidden;
     .left {
         display: flex;
         padding: 10px;
@@ -152,7 +154,7 @@ html {
         background-image: url("../Images/bannerBackground.png") ;
         background-size:cover;
         background-repeat: repeat-x;
-        animation: cloud 70s infinite ease-in-out;
+        animation: cloud 77s infinite ease-in-out;
     }
 }
 .content1{
