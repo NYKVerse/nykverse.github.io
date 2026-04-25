@@ -34,8 +34,9 @@ html {
         justify-self: right;
         position: absolute;
         width: 2px;
-        height: 250%;
+        height: 200%;
         right: 50%;
+        margin-top: 12px;
         background-color: white;
         transition: 1000ms ease-in-out;
         clip-path: inset(0% 0% 100% 0%);
@@ -69,8 +70,7 @@ html {
             text-decoration: underline;
         }
         
-    }
-    
+    } 
 }
 @keyframes fih {
     0% { opacity: 0%;}
@@ -128,7 +128,7 @@ html {
         left: 10;
         position: absolute;
         top: 10;
-        padding: 10px;
+        padding: 20px 0px 0px 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -159,7 +159,7 @@ html {
             margin: auto;
         }
         .line {
-            width: 10vw;
+            width: 30vw;
             height:2px;
             background-color: white;
             animation: wipe 2s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -192,10 +192,14 @@ html {
         }
     }
 }
+
 .content1{
+    justify-content: center;
+    padding: 4vw;
     height: 100%;
     display: flex;
     flex-direction: row;
+    background-color: yellow;
     .left {
         background-color: black;
         width: 100%;
@@ -217,5 +221,8 @@ html {
         .left{
             max-width: 100%;
         }
+    }
+    .content1 {
+        flex-direction: column;
     }
 }
