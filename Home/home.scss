@@ -20,6 +20,8 @@ html {
     }
     img:hover{
         rotate: 45deg;
+        cursor:pointer;
+        animation: fih 800ms linear;
     }
     #toggle{
         display: none;
@@ -66,12 +68,12 @@ html {
     50% { opacity: 100%;}
 }
 @keyframes cloud{
-    0% {transform: translateX(-100vw);}
-    30% {transform: translateX(0);}
+    0% {transform: translateX(-100%);}
+    /* 30% {transform: translateX(0);}
     20% {background-position-x: 0px;}
     80% {background-position-x: 1850px;}
-    70% {transform: translateX(0); }
-    100% {transform: translateX(100vw); background-position-x: 1850px;}
+    70% {transform: translateX(0); } */
+    100% {transform: translateX(100%);}
 }
 @keyframes wipe {
     0% {clip-path: inset(0% 100% 0% 0%);}
@@ -93,7 +95,7 @@ html {
         .logo {
             mix-blend-mode: screen;
             width: 100%;
-            z-index: -10;
+            z-index: -5;
         }
     }
     .right {
@@ -120,6 +122,7 @@ html {
         align-items: center;
         gap: 5px;
         a {
+            // animation: fih 800ms linear;
             transition: 200ms;
             font-size: x-small;
             justify-content: center;
@@ -127,7 +130,11 @@ html {
             text-decoration: none;
             color: white;
             padding: 0.5em 0.5em;
-            /* background-color: grey; */
+            // @for $i from 1 through 5{
+            //     &:nth-of-type(#{$i}) {
+            //         animation-delay: #{$i * 0.2}s;
+            //     }
+            // }
         }
         a:hover {
             transform: translateY(-5px);
@@ -146,15 +153,30 @@ html {
         }
     }
     .clouds {
-        z-index: -5;
-        width: 100vw;
-        height: 100%;
         position: absolute;
-        animation: cloud 10s infinite linear;
-        background-image: url("../Images/bannerBackground.png") ;
-        background-size:cover;
-        background-repeat: repeat-x;
-        animation: cloud 77s infinite ease-in-out;
+        height: 100%;
+        width: 100%;
+        .background, .foreground{
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            background-position: center;
+            background-repeat: repeat-x;
+        }
+        .background {
+            z-index: -12;
+            background-image: url("../Images/backgroundCloud1.png") ;
+            background-size:100%;
+            animation: cloud 50s infinite linear;
+        }
+        .foreground {
+            z-index: 0;
+            background-image: url("../Images/foregroundCloud1.png") ;
+            background-size:100%;
+            animation: cloud 30s infinite linear;
+        }
     }
 }
 .content1{
@@ -175,8 +197,8 @@ html {
 }
 
 
-/* @media (min-width=480px) {
-    @keyframes cloud {
+@media screen and (max-width=520px) {
+    /* @keyframes cloud {
         0% {transform: translateX(-100vw);}
         30% {transform: translateX(0);}
         20% {background-position-x: 0px;}
@@ -186,5 +208,10 @@ html {
     }
     .clouds {
         animation: cloud 5s linear infinite;
+    } */
+    .banner {
+        display: flex;
+        flex-direction: column;
+        max-width: 10px;
     }
-} */
+}
