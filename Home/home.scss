@@ -14,6 +14,7 @@ html {
     top: 0;
     right: 0;
     margin: 20px;
+    justify-content: center;
     img {
         width: 50px;
         transition: 200ms;
@@ -27,15 +28,27 @@ html {
         display: none;
     }
     #toggle:checked ~ .menuContainer{
-        right: 20;
+        right: 30;
     }
-    
+    .line {
+        justify-self: right;
+        position: absolute;
+        width: 2px;
+        height: 250%;
+        right: 50%;
+        background-color: white;
+        transition: 1000ms ease-in-out;
+        clip-path: inset(0% 0% 100% 0%);
+    }
+    #toggle:checked ~ .line {
+        clip-path: inset(0% 0% 0% 0%);
+    }
     /* #toggle:checked ~ .menuContainer a{
         animation: fih 700ms 0.5s;
     } */
     .menuContainer {
         transition: 500ms;
-        right: -30vh;
+        right: -300%;
         position:absolute;
         display: flex;
         flex-direction: column;
@@ -86,7 +99,7 @@ html {
     justify-content: center;
     height: 100%;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     .left {
         display: flex;
         padding: 10px;
@@ -197,21 +210,12 @@ html {
 }
 
 
-@media screen and (max-width=520px) {
-    /* @keyframes cloud {
-        0% {transform: translateX(-100vw);}
-        30% {transform: translateX(0);}
-        20% {background-position-x: 0px;}
-        80% {background-position-x: 100px;}
-        70% {transform: translateX(0); }
-        100% {transform: translateX(100vw); background-position-x: 1850px;}    
-    }
-    .clouds {
-        animation: cloud 5s linear infinite;
-    } */
+@media screen and (max-width: 520px) {
     .banner {
         display: flex;
         flex-direction: column;
-        max-width: 10px;
+        .left{
+            max-width: 100%;
+        }
     }
 }
