@@ -3,6 +3,7 @@ html {
     background-image: linear-gradient(45deg, #7838bc, #459de4);
     color: white;
     font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
     body {
         margin: 0;
         padding: 0;
@@ -118,6 +119,10 @@ html {
         h3, p {
             margin: 5px;
             font-size: small;
+            a {
+                color: #e1b3ff;
+                text-decoration: none;
+            }
         }
         h1 {
             font-family:'Montserrat';
@@ -166,6 +171,7 @@ html {
         }
     }
     .clouds {
+        pointer-events: none;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -193,33 +199,80 @@ html {
     }
 }
 
-.content1{
+.aboutMe{
     justify-content: center;
     padding: 4vw;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: row;
-    background-color: yellow;
     .left {
-        background-color: black;
         width: 100%;
-        height: 100%;
+        height: 80%;
     }
     .right {
-        background-color: white;
         width: 100%;
         height: 100%;
     }
     
 }
 
+.bottomBar {
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    padding: 3vw;
+    .top {
+        position: absolute;
+        padding: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        a {
+            // animation: fih 800ms linear;
+            transition: 200ms;
+            font-size: x-small;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            padding: 0.5em 0.5em;
+            // @for $i from 1 through 5{
+            //     &:nth-of-type(#{$i}) {
+            //         animation-delay: #{$i * 0.2}s;
+            //     }
+            // }
+        }
+        a:hover {
+            transform: translateY(-5px);
+            animation: fih 800ms linear;
+        }
+        a img {
+            left: 0;
+            width: 20px;
+            margin: auto;
+        }
+        .line {
+            width: 30vw;
+            height:2px;
+            background-color: white;
+            animation: wipe 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+}
 
+
+/*=========================================================*/
 @media screen and (max-width: 520px) {
     .banner {
         display: flex;
         flex-direction: column;
         .left{
             max-width: 100%;
+        }
+        .right {
+            text-align: center;
         }
     }
     .content1 {
