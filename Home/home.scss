@@ -231,7 +231,7 @@ html {
     position: relative;
     overflow: hidden;
     padding-left: 4vw;
-
+    padding-right: 4vw;
     .left {
         flex-direction: column;
 
@@ -379,6 +379,7 @@ html {
 }
 
 .bottomBar {
+    position: relative;
     background-color: black;
     width: 89.9%;
     height: 20%;
