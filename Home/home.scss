@@ -22,8 +22,29 @@ html {
         li {
             font-size: small;
         }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+        }
     }
 }
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+::-webkit-scrollbar-track {
+    background: #7e79cbd7; 
+    border-radius: 0px;
+  }
+::-webkit-scrollbar-thumb {
+    background: #474c9f ; 
+    border-radius:8px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #c4bee1;
+  }
+
 .topMenu {
     z-index: 10;
     position:fixed;
@@ -321,13 +342,15 @@ html {
         color: #d6b2ff;
     }
     .content {
+        padding: 10px;
+        margin: 10px;
         border-radius: 10px;
         background-color: #6f66ceb8;
         box-shadow: 0px 4px 7px 0px #1b172480;
         transition: 100ms ease-in-out;
     }
     .content:hover{
-        box-shadow: 0px 4px 7px 1px #a87ef0a7;
+        box-shadow: 0px 0px 7px 1px #a87ef0a7;
     }
     .videos {
         justify-content: center;
@@ -347,8 +370,7 @@ html {
                     object-fit:cover;
                     border-radius: 7px;
                 }
-                padding: 10px;
-                margin: 10px;
+                
             }
         } 
     }
@@ -368,8 +390,6 @@ html {
                     object-fit:cover;
                     border-radius: 7px;
                 }
-                padding: 10px;
-                margin: 10px;
                 h2 {
                     margin-top: 10px;
                 }
@@ -381,10 +401,82 @@ html {
         }
     }
     .art {
-        
+        .content {
+            .images {
+                display: flex;
+                flex-direction: row;
+                width:100%;
+                height: 200px;
+                overflow-y: auto;
+                background-color: #12043aa9;
+                border-radius: 6px; 
+                img {
+                    object-fit: contain;  
+                }
+            }
+        }
+    }
+    .music {
+        justify-content: center;
+        align-items: center;
+        .audios {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .kasaimpi {
+        p {
+            max-width: 80%;
+            text-align: center;
+        }
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .logo{ 
+            position: relative;
+            width: 200px;
+            height:200px;
+            display: flex;
+            img {
+                position: absolute;
+                width: 100%;
+            }
+            .top {
+                animation: top 5s infinite ease-in-out 2s;
+                cursor: pointer;
+            }
+        }
     }
 }
-
+.ending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    h3 {
+        margin: 0px;
+    }
+    h2 {
+        margin: 0px;
+    }
+    h1 {
+        margin: 0px;
+    }
+}
+@keyframes top {
+    20% {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(360deg) translateY(-20px);
+    }
+    80% {
+        transform: rotateY(0deg);
+    }
+}
 .bottomBar {
     position: relative;
     background-color: black;
