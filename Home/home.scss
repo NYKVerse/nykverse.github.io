@@ -51,7 +51,7 @@ html {
         justify-self: right;
         position: absolute;
         width: 2px;
-        height: 200%;
+        height: 300%;
         right: 50%;
         margin-top: 12px;
         background-color: white;
@@ -311,6 +311,7 @@ html {
     }
     h2 {
         margin: 0;
+        margin-top: 20px;
     }
     h3 {
         margin-top: 0;
@@ -318,6 +319,15 @@ html {
     }
     a:hover {
         color: #d6b2ff;
+    }
+    .content {
+        border-radius: 10px;
+        background-color: #6f66ceb8;
+        box-shadow: 0px 4px 7px 0px #1b172480;
+        transition: 100ms ease-in-out;
+    }
+    .content:hover{
+        box-shadow: 0px 4px 7px 1px #a87ef0a7;
     }
     .videos {
         justify-content: center;
@@ -331,19 +341,14 @@ html {
             display: flex;
             .content {
                 max-width: 300px;
-                img {
+                video, img {
                     width: 300px;
                     height: 150px;
                     object-fit:cover;
                     border-radius: 7px;
                 }
-                border-radius: 10px;
-                background-color: #5a40a3b8;
                 padding: 10px;
                 margin: 10px;
-                h2 {
-                    margin-top: 10px;
-                }
             }
         } 
     }
@@ -363,8 +368,6 @@ html {
                     object-fit:cover;
                     border-radius: 7px;
                 }
-                border-radius: 10px;
-                background-color: #5a40a3b8;
                 padding: 10px;
                 margin: 10px;
                 h2 {
