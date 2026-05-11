@@ -296,10 +296,9 @@ html {
                 }
             }
         }
-        
     }
-    
 }
+
 @keyframes moontate {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
@@ -348,6 +347,7 @@ html {
             }
         } 
     }
+
     .threeD {
         display: flex;
         align-items: center;
@@ -357,7 +357,7 @@ html {
             display: flex;
             .content {
                 max-width: 200px;
-                img {
+                video, img {
                     width: 200px;
                     height: 400px;
                     object-fit:cover;
@@ -430,6 +430,8 @@ html {
         }
     }
 }
+
+
 
 
 
