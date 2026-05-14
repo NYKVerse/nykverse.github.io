@@ -245,8 +245,7 @@ html {
     justify-content: center;
     text-align: justify;
     max-width: 100%;
-    max-height: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -255,7 +254,6 @@ html {
     padding-right: 4vw;
     .left {
         flex-direction: column;
-
         justify-content: center;
         display: flex;
         max-width: 60%;
@@ -271,8 +269,9 @@ html {
     }
     .right {
         width: 50%;
+        height: 100%;
         .moon {
-            max-height: 100%;
+            max-height: fit-content;
             justify-content: center;
             align-items: center;
             display: flex;
@@ -563,7 +562,7 @@ html {
             flex-direction: column;
             .left {
                 flex-wrap: nowrap;
-                overflow-y: auto;
+                overflow-y: show;
             }
             .right{
                 overflow: auto;
